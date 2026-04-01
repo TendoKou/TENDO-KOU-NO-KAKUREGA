@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>天童劫の隠れ家 - Official Links</title>
+
+<meta property="og:title" content="天童劫の隠れ家 - Official Links">
+    <meta property="og:description" content="隠れ家です。">
+    <meta property="og:image" content="https://tendokou.github.io/TENDO-KOU-NO-KAKUREGA/png/header.png">
+<meta name="twitter:image" content="https://tendokou.github.io/TENDO-KOU-NO-KAKUREGA/png/header.png">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="天童劫の隠れ家">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@tendokou">
+    <meta name="twitter:title" content="天童劫の隠れ家 - Official Links">
+    <meta name="twitter:description" content="隠れ家です。">
+    <meta name="twitter:image" content="https://tendokou.github.io/TENDO-KOU-NO-KAKUREGA/png/header.png">
+
+    <link rel="icon" href="png/icon.png" type="image/png">
+    <link rel="apple-touch-icon" href="png/icon.png">
+
+    <style>
+        @keyframes move-bg {
+            0% { background-position: 0 0; }
+            100% { background-position: 100px 100px; }
+        }
+
+        .bg-layer {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #1a1a2e 0%, #0f0c29 100%);
+        }
+
+        .bg-layer::after {
+            content: "";
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background-image: 
+                linear-gradient(45deg, rgba(100, 150, 255, 0.1) 25%, transparent 25%), 
+                linear-gradient(-45deg, rgba(100, 150, 255, 0.1) 25%, transparent 25%),
+                linear-gradient(45deg, transparent 75%, rgba(100, 150, 255, 0.1) 75%),
+                linear-gradient(-45deg, transparent 75%, rgba(100, 150, 255, 0.1) 75%);
+            background-size: 100px 100px;
+            animation: move-bg 15s linear infinite;
+        }
+
+        html, body {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            min-height: 100vh;
+            background-color: transparent;
+        }
+
+        body {
+            font-family: sans-serif;
+            color: #eee;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 40px 20px;
+            box-sizing: border-box;
+        }
+
+        .my-header {
+            width: 100%;
+            max-width: 500px;
+            margin-bottom: 20px;
+            border-radius: 15px;
+            box-shadow: 0 5px 25px rgba(0,0,0,0.8);
+            object-fit: cover;
+        }
+
+        h1 {
+            margin: 10px 0 30px 0;
+            font-size: 1.8rem;
+            color: #fff;
+            text-shadow: 0 0 15px rgba(138, 180, 248, 0.5);
+        }
+
+        .links {
+            width: 100%;
+            max-width: 500px;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.7);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+        }
+
+        .btn {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 10px;
+            text-decoration: none;
+            border-radius: 15px;
+            font-weight: bold;
+            font-size: 0.8rem;
+            transition: 0.4s cubic-bezier(0.23, 1, 0.32, 1);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: #ccc;
+            aspect-ratio: 1 / 1;
+            background: rgba(255, 255, 255, 0.03);
+        }
+
+        .btn-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: 10px;
+            border-radius: 12px;
+            object-fit: cover;
+            background-color: rgba(255, 255, 255, 0.05);
+            filter: grayscale(20%);
+        }
+
+        .btn-full {
+            grid-column: span 2;
+            aspect-ratio: auto;
+            flex-direction: row;
+            font-size: 0.95rem;
+            padding: 15px;
+        }
+        .btn-full .btn-icon { margin-bottom: 0; margin-right: 15px; }
+
+        .btn-main { 
+            border-color: rgba(100, 180, 255, 0.4); 
+            background: rgba(100, 180, 255, 0.05); 
+            color: #fff;
+        }
+        .btn-sub { border-color: rgba(255, 255, 255, 0.1); }
+        .btn-contact { 
+            border-color: rgba(0, 200, 150, 0.3); 
+            background: rgba(0, 200, 150, 0.05); 
+        }
+
+        .btn:hover {
+            transform: translateY(-5px);
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(255, 255, 255, 0.5);
+            box-shadow: 0 0 20px rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .btn-main:hover { box-shadow: 0 0 20px rgba(100, 180, 255, 0.2); }
+        .btn-contact:hover { box-shadow: 0 0 20px rgba(0, 200, 150, 0.2); }
+
+        .rules-link { margin-top: 40px; font-size: 0.9rem; }
+        .rules-link a { color: #888; text-decoration: none; border-bottom: 1px solid #444; }
+        .footer { margin-top: 40px; font-size: 0.8rem; color: rgba(255, 255, 255, 0.2); }
+    </style>
+</head>
+<body>
+
+    <div class="bg-layer"></div>
+
+    <img src="png/header.png" alt="天童劫" class="my-header">
+
+    <h1> 天童 劫の隠れ家 </h1>
+
+    <div class="links">
+        <a href="https://twitter.com/tendokou" class="btn btn-sub">
+            <img src="png/3.png" alt="" class="btn-icon">
+            X (Twitter)
+        </a>
+        <a href="https://www.youtube.com/@tendokou" class="btn btn-sub">
+            <img src="png/2.png" alt="" class="btn-icon">
+            YouTube
+        </a>
+        <a href="https://www.pixiv.net/users/2957662" class="btn btn-sub">
+            <img src="png/1.png" alt="" class="btn-icon">
+            pixiv
+        </a>
+        <a href="https://www.nicovideo.jp/user/19687915" class="btn btn-sub">
+            <img src="png/4.png" alt="" class="btn-icon">
+            ニコニコ
+        </a>
+
+        <a href="https://tendokou.github.io/MY-GAME-CENTER/" class="btn btn-main btn-full">
+            <img src="png/OURGAMES.png" alt="" class="btn-icon">
+            Geminiを使用して制作したミニゲーム倉庫
+        </a>
+
+        <a href="あなたのGoogleフォームのURL" class="btn btn-contact btn-full">
+            <img src="png/!.png" alt="" class="btn-icon">
+            お問い合わせ
+        </a>
+    </div>
+
+    <div class="rules-link">
+        <a href="copyright.html">著作物利用規約 (TERMS OF USE) はこちら</a>
+    </div>
+
+    <div class="footer">
+        ©︎2026 天童 劫 Tendo Kou<br>
+当サイトの制作にはGeminiを使用しております。
+    </div>
+    </div>
+    </div>
+
+<script>
+
+console.log("%cTHANK YOU FOR VISITING\n%cTHANK YOU Gemini BY Tendo Kou", 
+            "color: #ff71ce; font-size: 20px; font-weight: bold;", 
+            "color: #01cdfe; font-size: 14px;")
+
+
+</script>
+</body>
+</html>
